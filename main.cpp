@@ -6,6 +6,7 @@ using namespace std;
 array<char, 9> board = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
 int coord_to_index(int, int);
+void print_board();
 
 int main() {
     int noOfPlayers;
