@@ -8,7 +8,8 @@ array<char, 9> board = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 int coord_to_index(int, int);
 
 int main() {
-    cout << "Hello, world.\n";
+    cout << "Welcome to \n";
+
     return 0;
 }
 
