@@ -20,6 +20,27 @@ int main()
     cin >> player1;
     cout << "Enter player 2 name: \n";
     cin >> player2;
+<<<<<<< HEAD
+=======
+
+    print_board()
+    {
+        int choice;
+        char token = 'x';
+
+        if(token=='x'){
+            cout<<player1<<" enter your choice: ";
+            cin>>choice;
+        }
+        if(token == 'y'){
+            cout<<player2<<" enter your choice: ";
+            cin>>choice;
+        }
+
+        
+
+    }
+>>>>>>> refs/remotes/origin/main
 
     return 0;
 }
