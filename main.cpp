@@ -26,6 +26,7 @@ int main()
     cin >> player2;
 
     print_board(player1, player2);
+    while (true)
     {
         int x, y;
         if (token == 'X')
@@ -40,7 +41,13 @@ int main()
         }
         int index = coord_to_index(x, y);
         if (index == -1)
-            ;
+        {
+            continue;
+        }
+        if (is_filled(index))
+        {
+            continue;
+        }
         board[index] = token;
         if (token == 'X')
         {
