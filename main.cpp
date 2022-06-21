@@ -91,3 +91,11 @@ void print_board(string player1, string player2)
     cout << '\n'
          << "Player 2: " << player2 << '\n';
 }
+
+bool is_filled(int index)
+{
+    if (board[index] == ' ')
+        return false;
+    else
+        return true;
+}
