@@ -25,9 +25,9 @@ int main()
     cout << "Enter player 2 name: \n";
     cin >> player2;
 
-    print_board(player1, player2);
     while (true)
     {
+        print_board(player1, player2);
         int x, y;
         if (token == 'X')
         {
