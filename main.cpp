@@ -13,6 +13,9 @@ int main()
     int noOfPlayers;
     string player1;
     string player2;
+    char token = 'X';
+    int row;
+    int column;
     cout << "  Welcome to the Tic Tac Toe  \n";
     cout << "Enter the Numbers of player(1/2)";
     cin >> noOfPlayers;
@@ -23,16 +26,28 @@ int main()
 
     print_board(player1, player2);
     {
-        int choice;
-        char token = 'x';
-
-        if(token=='x'){
-            cout<<player1<<" enter your choice: ";
-            cin>>choice;
+        int x, y;
+        if (token == 'X')
+        {
+            cout << player1 << " enter your choice: ";
+            cin >> x >> y;
         }
-        if(token == 'y'){
-            cout<<player2<<" enter your choice: ";
-            cin>>choice;
+        if (token == 'O')
+        {
+            cout << player2 << " enter your choice: ";
+            cin >> x >> y;
+        }
+        int index = coord_to_index(x, y);
+        if (index == -1)
+            ;
+        board[index] = token;
+        if (token == 'X')
+        {
+            token = 'O';
+        }
+        else
+        {
+            token = 'X';
         }
     }
     return 0;
@@ -53,7 +68,8 @@ int coord_to_index(int x, int y)
 
 void print_board(string player1, string player2)
 {
-    cout << '\n' << "Player 1: " << player1 << '\n';
+    cout << '\n'
+         << "Player 1: " << player1 << '\n';
     cout << "____________\n";
     int j = 0;
     for (int i = 0; i < 3; i++)
@@ -64,5 +80,6 @@ void print_board(string player1, string player2)
         cout << "____________\n";
         j += 3;
     }
-    cout << '\n' << "Player 2: " << player2 << '\n';
+    cout << '\n'
+         << "Player 2: " << player2 << '\n';
 }
