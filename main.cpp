@@ -3,7 +3,7 @@
 
 using namespace std;
 
-array<char, 9> board;
+array<char, 9> board = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
 int main() {
     cout << "Hello, world.\n";
