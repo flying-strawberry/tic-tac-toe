@@ -20,10 +20,8 @@ int main()
     cin >> player1;
     cout << "Enter player 2 name: \n";
     cin >> player2;
-<<<<<<< HEAD
-=======
 
-    print_board()
+    print_board(player1, player2);
     {
         int choice;
         char token = 'x';
@@ -36,12 +34,7 @@ int main()
             cout<<player2<<" enter your choice: ";
             cin>>choice;
         }
-
-        
-
     }
->>>>>>> refs/remotes/origin/main
-
     return 0;
 }
 
@@ -58,11 +51,13 @@ int coord_to_index(int x, int y)
     }
 }
 
-void print_board(string player1, string player2) {
+void print_board(string player1, string player2)
+{
     cout << '\n' << "Player 1: " << player1 << '\n';
     cout << "_________\n";
     int j = 0;
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++)
+    {
         cout << "|   |   |   |\n";
         cout << "| " << board[j] << " | " << board[j + 1] << " | " << board[j + 2] << " |";
         cout << "|   |   |   |\n";
