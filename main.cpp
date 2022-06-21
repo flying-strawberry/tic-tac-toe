@@ -54,13 +54,14 @@ int coord_to_index(int x, int y)
 void print_board(string player1, string player2)
 {
     cout << '\n' << "Player 1: " << player1 << '\n';
-    cout << "_________\n";
+    cout << "____________\n";
     int j = 0;
     for (int i = 0; i < 3; i++)
     {
         cout << "|   |   |   |\n";
-        cout << "| " << board[j] << " | " << board[j + 1] << " | " << board[j + 2] << " |";
+        cout << "| " << board[j] << " | " << board[j + 1] << " | " << board[j + 2] << " |\n";
         cout << "|   |   |   |\n";
+        cout << "____________\n";
         j += 3;
     }
     cout << '\n' << "Player 2: " << player2 << '\n';
